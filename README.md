@@ -22,8 +22,15 @@ Run the game by running
 go run .
 ```
 
+
+## Run the Tests
+
+```bash
+go test
+```
+
 ## Links
 
 - https://ebitengine.org/
 - https://go.dev/doc/install
-
+- https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/hello-world
