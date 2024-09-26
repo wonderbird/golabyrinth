@@ -34,11 +34,26 @@ go test
 From https://ebitengine.org/en/documents/webassembly.html
 
 ```shell
-env GOOS=js GOARCH=wasm go build -o ./build/smcd-go-labyrinth.wasm ./
-cp $(go env GOROOT)/misc/wasm/wasm_exec.js ./build/
-cp ./index.html ./build/index.html
-zip -r9 smcd-go-labyrinth.zip ./build/
+env GOOS=js GOARCH=wasm go build -o ./build/raw/smcd-go-labyrinth.wasm ./
+cp $(go env GOROOT)/misc/wasm/wasm_exec.js ./build/raw/
+cp ./index.html ./build/raw/index.html
+zip -r9 ./build/smcd-go-labyrinth.zip ./build/raw
 ```
+
+## Serve index.html locally
+
+This requires either npm serve or a build in server like those offered by JetBrains tooling.
+
+### Disclaimer
+
+If you want to install a local http server use the following commands:
+
+```shell
+npm install --global serve
+serve ./build/raw
+```
+
+Open the shown localhost link. (default port 3000 will switch to different open port if occupied)
 
 ## Links
 
