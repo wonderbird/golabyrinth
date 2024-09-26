@@ -29,6 +29,17 @@ go run .
 go test
 ```
 
+## Build for deployment
+
+From https://ebitengine.org/en/documents/webassembly.html
+
+```shell
+env GOOS=js GOARCH=wasm go build -o ./build/smcd-go-labyrinth.wasm ./
+cp $(go env GOROOT)/misc/wasm/wasm_exec.js ./build/
+cp ./index.html ./build/index.html
+zip -r9 smcd-go-labyrinth.zip ./build/
+```
+
 ## Links
 
 - https://ebitengine.org/
