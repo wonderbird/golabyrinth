@@ -1,4 +1,4 @@
-module github.com/small-coding-dojo/smcd-go-labyrinth
+module github.com/wonderbird/golabyrinth
 
 go 1.23.0
 
