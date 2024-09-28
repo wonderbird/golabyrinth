@@ -1,4 +1,4 @@
-package main
+package golabyrinth
 
 import (
 	"github.com/hajimehoshi/ebiten/v2"
