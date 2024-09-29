@@ -1,4 +1,4 @@
-package golabyrinth
+package labyrinth
 
 import "testing"
 
