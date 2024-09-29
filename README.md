@@ -55,6 +55,20 @@ serve ./build/raw
 
 Open the shown localhost link. (default port 3000 will switch to different open port if occupied)
 
+## Build Android AAR
+
+```shell
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+go install github.com/hajimehoshi/ebiten/v2/cmd/ebitenmobile@latest
+
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home/bin:$PATH
+
+mkdir -p ./build/android
+ebitenmobile bind -target android -javapkg systems.boos.labyrinth -o ./build/android/game.aar ./mobile
+```
+
 ## Links
 
 - https://ebitengine.org/
